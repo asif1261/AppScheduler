@@ -3,8 +3,28 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="color_main">#0B369A</color>
+    <color name="color_fade">#A90C3EB3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorAppActivityBackground">#FAFAFA</color>
+    <color name="colorLetter">#F0635757</color>
+    <color name="colorProfile">#BE000000</color>
+    <color name="transparent_app">#00000000</color>
+    <color name="colorGreen">#00C853</color>
+    <color name="colorAction">#5ec639</color>
+    <color name="colorAction_Lite">#805EC639</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="disabledColor">#A2A0A0</color>
+    <color name="colorDivider">#F699B0</color>
+    <color name="colorViewUserDetails">#FF3267</color>
+    <color name="colorDeepGreen">#17944C</color>
+    <color name="colorLiteGreen">#0CB251</color>
+    <color name="colorLiteOrange">#FFA000</color>
+    <color name="colorDeepOrange">#f57c00</color>
+    <color name="colorLitePurple">#d500f9</color>
+    <color name="colorDeepPurple">#9500ae</color>
 </resources>
