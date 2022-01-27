@@ -17,8 +17,8 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
-            android:id="@+id/action_homeFragment_to_editScheduleFragment"
-            app:destination="@id/editScheduleFragment"
+            android:id="@+id/action_homeFragment_to_editScheduleFragment2"
+            app:destination="@id/editScheduleFragment2"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/setScheduleFragment"
-        android:name="com.example.appscheduler.ui.SetSchedule.SetScheduleFragment"
+        android:name="com.example.appscheduler.ui.setSchedule.SetScheduleFragment"
         android:label="{setScheduleName}"
         tools:layout="@layout/fragment_set_schedule" >
 
@@ -35,9 +35,10 @@
             app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/editScheduleFragment"
+        android:id="@+id/editScheduleFragment2"
         android:name="com.example.appscheduler.ui.editSchedule.EditScheduleFragment"
-        android:label="{editScheduleName}" >
+        android:label="{editScheduleName}"
+        tools:layout="@layout/fragment_edit_schedule" >
 
         <argument
             android:name="editScheduleName"

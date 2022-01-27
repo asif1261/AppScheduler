@@ -13,7 +13,7 @@ import com.google.android.material.transition.MaterialFadeThrough
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class EditScheduleFragment : Fragment(R.layout.fragment_set_schedule) {
+class EditScheduleFragment : Fragment(R.layout.fragment_edit_schedule) {
 
     private lateinit var navController: NavController
     private var currentBinding: FragmentEditScheduleBinding? = null

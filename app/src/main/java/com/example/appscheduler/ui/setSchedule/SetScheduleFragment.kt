@@ -1,4 +1,4 @@
-package com.example.appscheduler.ui.SetSchedule
+package com.example.appscheduler.ui.setSchedule
 
 import android.os.Bundle
 import android.view.LayoutInflater
