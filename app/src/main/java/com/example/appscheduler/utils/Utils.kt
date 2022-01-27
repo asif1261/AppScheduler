@@ -27,7 +27,7 @@ fun View.enable(enable: Boolean) {
     alpha = if (enable) 1f else 0.5f
 }
 
-//Material date picker extension function for textInputLayout
+//Material Time picker extension function for textInputLayout
 fun TextInputEditText.datePickerMaterialAndGetValue(
     fragmentManager: FragmentManager,
     myCalling: ((input: String) -> Unit)?
