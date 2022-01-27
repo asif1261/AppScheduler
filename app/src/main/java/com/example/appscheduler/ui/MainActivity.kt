@@ -1,7 +1,7 @@
 package com.example.appscheduler.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.appscheduler.R
 
 class MainActivity : AppCompatActivity() {
