@@ -11,23 +11,4 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
-    /*@Singleton
-    @Provides
-    fun provideLoginApi(
-        @ApplicationContext context: Context,
-        retrofitBuilder: RetrofitBuilder
-    ): LoginApi {
-        return retrofitBuilder.buildApi(LoginApi::class.java, context)
-    }*/
-
-
-    /*@Singleton
-    @Provides
-    fun provideAdmin(
-        retrofitBuilder02: RetrofitBuilder02,
-        tokenPreferences: TokenManager
-    ) : AdminApi {
-        return retrofitBuilder02.createServiceWithAuth(AdminApi::class.java, tokenPreferences)
-    }*/
 }
