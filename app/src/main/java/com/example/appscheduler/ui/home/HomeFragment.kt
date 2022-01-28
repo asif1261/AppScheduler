@@ -1,5 +1,7 @@
 package com.example.appscheduler.ui.home
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ import com.example.appscheduler.ui.adapters.ActionClickListenerForInstalledApps
 import com.example.appscheduler.ui.adapters.InstalledAppsAdapter
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.transition.MaterialFadeThrough
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,6 +33,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), ActionClickListenerForIns
     private val binding get() = currentBinding!!
 
     private lateinit var installedAppAdapter: InstalledAppsAdapter
+    private lateinit var sharedPreference: SharedPreferences
+    private var appsList: MutableList<AppInfo>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +49,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ActionClickListenerForIns
         currentBinding = FragmentHomeBinding.bind(view)
         showAnimation()
         navController = findNavController()
+        sharedPreference = requireContext().getSharedPreferences("key", Context.MODE_PRIVATE)
 
         bottomSheetBehavior()
         initRecyclerView()
@@ -87,6 +93,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ActionClickListenerForIns
             }
 
             if (appsData != null) {
+                appsList = appsData.toMutableList()
                 installedAppAdapter.submitList(appsData)
                 showRecyclerViewSelectApps(true)
                 showNoAppsLayoutSelectApps(false)
@@ -97,11 +104,22 @@ class HomeFragment : Fragment(R.layout.fragment_home), ActionClickListenerForIns
         }
     }
 
+    private fun dataForActionListener(position: Int, key: String){
+        val subsetLeaves: AppInfo = appsList!![position]
+
+        val prefsEditor = sharedPreference.edit()
+        val gson = Gson()
+        val json = gson.toJson(subsetLeaves)
+        prefsEditor.putString(key, json)
+        prefsEditor.apply()
+    }
+
     override fun actionClickListener(position: Int) {
         goToSetSchedule(position)
     }
 
     private fun goToSetSchedule(position: Int){
+        dataForActionListener(position, "installed_appData")
         val action = HomeFragmentDirections.actionHomeFragmentToSetScheduleFragment("Set Schedule")
         navController.navigate(action)
     }

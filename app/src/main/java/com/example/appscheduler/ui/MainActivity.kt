@@ -1,5 +1,6 @@
 package com.example.appscheduler.ui
 
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -30,12 +31,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var navController: NavController
+    private lateinit var sharedPreference: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val view = binding.root
         setContentView(view)
         setSupportActionBar(binding.toolbarMain)
+
+        sharedPreference = getSharedPreferences("key", MODE_PRIVATE)
 
         setUpNav()
     }
@@ -76,6 +80,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private suspend fun clearAndExit(){
+        sharedPreference.edit().clear().apply()
+
+        lifecycleScope.launch {
+            delay(600)
+            exitProcess(0)
+        }
+    }
+
     private fun exitFromApp() {
         AlertDialog.Builder(this, R.style.MyThemeOverlay_MaterialComponents_MaterialAlertDialog)
             .setTitle(WANT_TO_EXIT)
@@ -90,8 +103,7 @@ class MainActivity : AppCompatActivity() {
                 lifecycleScope.launch {
                     delay(900)
                     exitProgress.dismiss()
-                    exitProcess(0)
-                    //clearAndExit()
+                    clearAndExit()
                 }
             }.create().show()
     }
