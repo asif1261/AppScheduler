@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/drawable-mdpi/bottom_sheet_draggable_line.xml" value="0.38051282051282054" />
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/drawable-mdpi/logs.xml" value="0.38051282051282054" />
         <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/drawable/circular_progressbar_drawable.xml" value="0.38051282051282054" />
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/drawable/exit_run.xml" value="0.38051282051282054" />
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/drawable/rounded_background.xml" value="0.38051282051282054" />
         <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/exit_progress_dialog.xml" value="0.3703125" />
         <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/fragment_edit_schedule.xml" value="0.33" />
-        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/fragment_home.xml" value="0.3703125" />
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/layout/fragment_set_edit_schedule.xml" value="0.3703125" />
+        <entry key="..\:/Android_Neccessary_Source_Code/AppScheduler/app/src/main/res/menu/logout.xml" value="0.3703125" />
       </map>
     </option>
   </component>

@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.appscheduler.R
 import com.example.appscheduler.databinding.FragmentHomeBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.transition.MaterialFadeThrough
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -33,6 +34,27 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         currentBinding = FragmentHomeBinding.bind(view)
         showAnimation()
         navController = findNavController()
+
+        bottomSheetBehavior()
+    }
+
+    private fun bottomSheetBehavior(){
+        binding.apply {
+            BottomSheetBehavior.from(layoutSelectApps).apply {
+                peekHeight = 250
+                this.state = BottomSheetBehavior.STATE_EXPANDED
+            }
+        }
+    }
+
+    private fun goToSetSchedule(){
+        val action = HomeFragmentDirections.actionHomeFragmentToSetScheduleFragment("Set Schedule")
+        navController.navigate(action)
+    }
+
+    private fun goToEditSchedule(){
+        val action = HomeFragmentDirections.actionHomeFragmentToEditScheduleFragment("Edit Schedule")
+        navController.navigate(action)
     }
 
     private fun showAnimation(){

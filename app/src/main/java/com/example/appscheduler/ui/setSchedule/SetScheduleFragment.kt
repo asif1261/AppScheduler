@@ -36,7 +36,7 @@ class SetScheduleFragment : Fragment(R.layout.fragment_set_schedule) {
     }
 
     private fun showAnimation(){
-        enterTransition = MaterialFadeThrough()
+        enterTransition =  MaterialFadeThrough()
         exitTransition = MaterialFadeThrough()
     }
 
