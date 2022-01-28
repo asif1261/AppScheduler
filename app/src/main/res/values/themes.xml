@@ -46,7 +46,7 @@
     </style>
 
     <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button.TextButton.Dialog">
-        <item name="android:textColor">@color/color_main</item>
+        <item name="android:textColor">@color/colorRed</item>
         <item name="backgroundTint">@color/transparent_app</item>
     </style>
 

@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="12dp"
         android:contentDescription="@string/image"
-        android:minWidth="35dp"
-        android:minHeight="35dp"
+        android:minWidth="38dp"
+        android:minHeight="38dp"
+        android:padding="5dp"
         android:src="@drawable/logs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -82,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/bottom_sheet_draggable_line"
                 android:layout_marginTop="4dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:contentDescription="@string/image" />
 
             <TextView
                 android:id="@+id/tv_SelectApp"
@@ -98,7 +100,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="12dp">
+                android:layout_marginTop="10dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_SelectApp"
@@ -118,6 +120,7 @@
                     android:textColor="@color/white"
                     android:layout_marginTop="10dp"
                     android:textSize="20sp"
+                    android:visibility="gone"
                     android:textStyle="bold" />
             </FrameLayout>
         </LinearLayout>
